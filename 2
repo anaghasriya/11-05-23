@@ -1,0 +1,15 @@
+first=int(input())
+second=int(input())
+def prime(i):
+    flag = 0
+    for j in range(2, i//2+1):
+        if i%j==0:
+            flag = 1
+    if flag==0:
+        return True
+    return False
+total = 0
+for i in range(first, second+1):
+    if prime(i):
+        total = total + i
+print(total)
